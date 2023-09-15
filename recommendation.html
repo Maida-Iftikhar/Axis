@@ -13,7 +13,7 @@
 
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/b70f3ea85a.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/chatbot.css">
+  <link rel="stylesheet" href="css/recommendation.css">
 
   <!-- BootStrap Scripts -->
   <!-- some features of bootsrap require javascript to work -->
@@ -55,7 +55,31 @@
 
     </div>
     </div>
-  </section>  
+  </section> 
+     <div class="recommendation-upload">
+        <div class="container">
+            <div class="screen">
+              <div class="screen-body">
+                  <div class="app-title">
+                    <span id="top-text" style="font-size: 20px;">Upload here</span>
+                </div>
+                <div class="screen-body-item">
+                  <div class="app-form">
+                    <div class="app-form-group message">
+                      <input class="app-form-control" placeholder="Please enter your text here" id="textData">
+                    </div>
+                    <div class="app-form-group buttons">
+                      <button class="app-form-button" type="button" id="cancel-btn">CANCEL</button>
+                      <button class="app-form-button" type="button" id="send-btn">SEND</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+     </div> 
      <div id='bodybox'>
           <p id="chatlog8" class="chatlog">&nbsp;</p>
           <p id="chatlog7" class="chatlog">&nbsp;</p>
@@ -153,6 +177,16 @@
           function placeHolder() {
             document.getElementById("chatbox").placeholder = "How may I help you?";
           }
+
+
+
+        document.getElementById("send-btn").onclick = function() {
+         document.getElementById("top-text").innerHTML = "Your data has been submitted ✅";
+         
+       }
+       document.getElementById("cancel-btn").onclick = function() {
+         document.getElementById("top-text").innerHTML = "Upload here";
+       }
           </script>  
 
 </body>

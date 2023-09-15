@@ -1,0 +1,267 @@
+#bodybox {
+    font: 15px arial, sans-serif;
+    margin: auto;
+    margin-top: 40px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    box-shadow: 5px 5px 5px rgb(138, 119, 137);
+    border-radius: 15px;
+    width: 80%;
+    padding-left: 3%;
+    background-image: url(/images/white-bg.avif);
+    float: right;
+    max-width: 65%;
+  }
+
+  
+  .chatlog {
+      font-family: "ubuntu";
+  }
+  
+  #chatbox {
+    font: 17px arial, sans-serif;
+    height: 50px;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(235, 227, 227);
+    padding-left: 30px;
+    width: 100%;
+  }
+  .gradient-background {
+    background: linear-gradient(300deg, #4941ef, #9b4279, #b48079);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  
+  .colored-section{
+    background-color: #102C57;
+    /* background-image: linear-gradient(to left,#102C57, #967E76 ); */
+    color:#fff;
+  }
+  
+  .white-section{
+  background-color: #fff;
+  }
+  
+  /* Navigation bar */
+  .navbar {
+    padding: 0 0 4.5rem;
+  }
+  
+  .navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: "bold";
+  }
+  
+  .navbar-item {
+    padding: 0 18px;
+    font-family: "Montserrat-light";
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  
+  /* Download Buttons */
+  .download-button {
+    margin: 5% 3% 5% 0;
+  }
+  
+  /* title section */
+  #title {
+    color: white;
+    text-align: left;
+  }
+  
+  #title .container-fluid {
+    padding: 3% 12% 7%;
+  }
+  
+  .title-img {
+    width: 60%;
+    position: absolute;
+    right: 30%;
+  }
+  
+  .recommendation-upload{
+    float: left;
+    width: 33%;
+    margin-top: 40px;
+    padding-top: 20px;
+  }
+  /* ////////////////////////////////////////////// */
+
+  *, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .container {
+    flex: 0 1 700px;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .screen {
+    position: relative;
+    background: url(/images/white-bg.avif);
+    border-radius: 15px;
+  }
+  
+  .screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+  }
+  
+  .screen-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #4d4d4f;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  
+  .screen-header-left {
+    margin-right: auto;
+  }
+  
+  .screen-header-button {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 3px;
+    border-radius: 8px;
+    background: white;
+  }
+  
+  .screen-header-button.close {
+    background: #ed1c6f;
+  }
+  
+  .screen-header-button.maximize {
+    background: #e8e925;
+  }
+  
+  .screen-header-button.minimize {
+    background: #74c54f;
+  }
+  
+  .screen-header-right {
+    display: flex;
+  }
+  
+  .screen-header-ellipsis {
+    width: 3px;
+    height: 3px;
+    margin-left: 2px;
+    border-radius: 8px;
+    background: #999;
+  }
+
+  .screen-body-item {
+    flex: 1;
+    padding: 50px;
+  }
+  
+  .screen-body-item.left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .app-title {
+    color: #ea1d6f;
+    font-size: 26px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-left: 40px;
+    padding-top: 20px;
+  }
+  
+  .app-title:after {
+    content: '';
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #ea1d6f;
+  }
+  
+  .app-contact {
+    margin-top: auto;
+    font-size: 8px;
+    color: #888;
+  }
+  
+  .app-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .app-form-group.message {
+    margin-top: 40px;
+  }
+  
+  .app-form-group.buttons {
+    margin-bottom: 0;
+    text-align: left;
+  }
+  
+  .app-form-control {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #0a0909;
+    font-size: 14px;
+    outline: none;
+    transition: border-color .2s;
+  }
+  
+  .app-form-control::placeholder {
+    color: #666;
+  }
+  
+  .app-form-control:focus {
+    border-bottom-color: #ddd;
+  }
+  
+  .app-form-button {
+    background: none;
+    border: none;
+    color: #ea1d6f;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .app-form-button:hover {
+    color: #b9134f;
+  }
+  
+
+  
