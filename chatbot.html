@@ -9,10 +9,11 @@
   <!-- CSS Stylesheets -->
   <!-- integarting bootstrap into css by cdn link -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/chatbot.css">
+
 
   <!-- fontawesome -->
   <script src="https://kit.fontawesome.com/b70f3ea85a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/chatbot.css">
 
   <!-- BootStrap Scripts -->
   <!-- some features of bootsrap require javascript to work -->
@@ -24,9 +25,8 @@
     <title>LLMatizer</title>
 </head>
 <body>
-    <form>
-    <div id='bodybox'>
-        <div id=''>
+     <form method="POST">
+     <div id='bodybox'>
           <p id="chatlog7" class="chatlog">&nbsp;</p>
           <p id="chatlog6" class="chatlog">&nbsp;</p>
           <p id="chatlog5" class="chatlog">&nbsp;</p>
@@ -35,52 +35,11 @@
           <p id="chatlog2" class="chatlog">&nbsp;</p>
           <p id="chatlog1" class="chatlog">&nbsp;</p>
           <input type="text" name="chat" id="chatbox" placeholder="Hi there! I am Axis Bank's chatbot." onfocus="placeHolder()">
-          <button type="submit" class="btn btn-dark">Submit</button>
         </div>
-        <br>
-        <br>
-    </div>  
-   </form>  
+    </form>
 </body>
 </html>
-
-
-<style>
-    body {
-  font: 15px arial, sans-serif;
-  background-color: #d9d9d9;
-  padding-top: 15px;
-  padding-bottom: 15px;
- }
-
-#bodybox {
-  margin: auto;
-  max-width: 550px;
-  font: 15px arial, sans-serif;
-  background-color: white;
-  padding-top: 20px;
-  padding-bottom: 25px;
-  padding-right: 25px;
-  padding-left: 25px;
-  box-shadow: 5px 5px 5px grey;
-  border-radius: 15px;
-}
-
-.chatlog {
-    font-family: "ubuntu";
-}
-
-#chatbox {
-  font: 17px arial, sans-serif;
-  height: 50px;
-  width: 100%;
-  border-radius: 50px;
-  border-style: solid;
-  border-color: rgb(235, 227, 227);
-  padding-left: 30px;
-}
-
-  </style>
+  
 
 <script>
 
@@ -100,7 +59,7 @@ function chatbotResponse() {
   }
 
   if (lastUserMessage === 'What is your name' || lastUserMessage === 'name') {
-    botMessage = 'My name is ' + botName;
+    botMessage = 'My name is LLMatizer';
   }
 }
 function newEntry() {
@@ -136,13 +95,10 @@ function keyPress(e) {
   if (key == 13 || key == 3) {
     newEntry();
   }
-  if (key == 38) {
-    console.log('hi')
-  }
 }
 
 
 function placeHolder() {
-  document.getElementById("chatbox").placeholder = "";
+  document.getElementById("chatbox").placeholder = "How may I help you?";
 }
 </script>  

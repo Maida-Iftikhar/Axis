@@ -1,0 +1,31 @@
+  
+  #bodybox {
+    font: 15px arial, sans-serif;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+    box-shadow: 5px 5px 5px grey;
+    border-radius: 15px;
+    background-image: url(/images/axis-logo.png);
+    background-repeat: no-repeat; 
+    background-size: contain;
+    background-position: -14%;
+    padding-left: 35%;
+    padding-right: 3%; 
+}
+
+  
+  .chatlog {
+      font-family: "ubuntu";
+  }
+  
+  #chatbox {
+    font: 17px arial, sans-serif;
+    height: 50px;
+    width: 100%;
+    border-radius: 50px;
+    border-style: solid;
+    border-color: rgb(235, 227, 227);
+    padding-left: 30px;
+  }
