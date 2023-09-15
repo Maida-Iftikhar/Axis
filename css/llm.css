@@ -1,10 +1,4 @@
 
-.gradient-background {
-    background: linear-gradient(300deg, #4941ef, #9b4279, #b48079);
-    background-size: 180% 180%;
-    animation: gradient-animation 18s ease infinite;
-}
-  
 :root {
     --blue: #79A9F5;
     --indigo: #C45F90;
@@ -11809,6 +11803,18 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
   
   .header .overlay .subtitle {

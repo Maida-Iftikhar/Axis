@@ -1,15 +1,14 @@
-  
-  #bodybox {
+#bodybox {
     font: 15px arial, sans-serif;
+    margin: auto;
+    margin-top: 40px;
     padding-top: 20px;
     padding-bottom: 25px;
     box-shadow: 5px 5px 5px rgb(138, 119, 137);
     border-radius: 15px;
-    float: right;
-    width: 68%;
+    width: 80%;
     padding-left: 3%;
-    background-image: url(/images/abstract-digital-background-network-connection-structure-big-data-futuristic-abstract-wave-3d-rendering_697329-183.avif);
-    background-repeat: no-repeat;
+    background-image: url(/images/white-bg.avif);
   }
 
   
@@ -26,14 +25,6 @@
     padding-left: 30px;
     width: 100%;
   }
-
-  .chatbot-details{
-    padding-top: 20px;
-    float: left;
-     max-width: 30%;
-     text-align: center;
-  }
-
   .gradient-background {
     background: linear-gradient(300deg, #4941ef, #9b4279, #b48079);
     background-size: 180% 180%;
