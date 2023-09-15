@@ -74,79 +74,91 @@
         </div>
   
 
-<script>
+        <script>
 
-var messages = [], 
-  lastUserMessage = "", //keeps track 
-  botMessage = "", //var keeps track of what the chatbot is going to say
-  botName = '🤖', 
-  userName = '👤',
-  talking = true; 
- async function chatbotResponse() {
-  talking = true;
-  botMessage = "Welcome to Axis bankathon"; //the default message
-
-  if (lastUserMessage === 'hi' || lastUserMessage =='hello') {
-    const hi = ['hi','hi, there!','hello', 'hey! good to see you here!']
-    botMessage = hi[Math.floor(Math.random()*(hi.length))];;
-  }
-
-  let request=await fetch("<backendurl>",{
-    method:"POST",
-    headers:{
-        "content-type":"application/json"
-    },
-    body:JSON.stringify({"usermessage":lastUserMessage})
-  })
-  let response=await request.json()
-  botMessage=response.message
-
-  //{message :"<message>} backend pe ye krde
-
-  if (lastUserMessage === 'What is your name' || lastUserMessage === 'name') {
-    botMessage = 'My name is LLMatizer';
-  }
-}
-function newEntry() {
-  
-  if (document.getElementById("chatbox").value != "") {
-    lastUserMessage = document.getElementById("chatbox").value;
-    document.getElementById("chatbox").value = "";
-    messages.push("<b>" + userName + ":</b> " + lastUserMessage)
-    chatbotResponse();
-    messages.push("<b>" + botName + ":</b> " + botMessage);
-    Speech(botMessage);
-    for (var i = 1; i < 9; i++) {
-      if (messages[messages.length - i])
-        document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
-    }
-  }
-}
-
-
-/////////////////////////////////////////////////
-function Speech(say) {
-  if ('speechSynthesis' in window && talking) {
-    var utterance = new SpeechSynthesisUtterance(say);
-    speechSynthesis.speak(utterance);
-  }
-}
-
-
-document.onkeypress = keyPress;
-function keyPress(e) {
-  var x = e || window.event;
-  var key = (x.keyCode || x.which);
-  if (key == 13 || key == 3) {
-    newEntry();
-  }
-}
-
-
-function placeHolder() {
-  document.getElementById("chatbox").placeholder = "How may I help you?";
-}
-</script>  
+          var csrfToken = "{{ csrf_token }}";
+          
+          
+          
+          var messages = [], 
+            lastUserMessage = document.getElementById("chatbox").value;
+            // lastUserMessage = "", //keeps track 
+            botMessage ="", //var keeps track of what the chatbot is going to say
+            botName = 'LLMatizer 🤖', 
+            userName = 'You 👤',
+            talking = true; 
+          async function chatbotResponse() {
+          
+            if (document.getElementById("chatbox").value != "") {
+              lastUserMessage = document.getElementById("chatbox").value;
+              document.getElementById("chatbox").value = "";
+              messages.push("<b>" + userName + ":</b> " + lastUserMessage)
+              for (var i = 1; i < 13; i++) {
+                if (messages[messages.length - i])
+                  document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
+              }
+            }
+          
+            talking = true;
+            // botMessage = "Welcome to Axis bankathon"; //the default message
+          
+            // if (lastUserMessage === 'hi' || lastUserMessage =='hello') {
+            //   const hi = ['hi','hi, there!','hello', 'hey! good to see you here!']
+            //   botMessage = hi[Math.floor(Math.random()*(hi.length))];;
+            // }
+          
+            let request=await fetch("http://127.0.0.1:8000/sales/chatbot_qna/",{
+              method:"POST",
+              headers:{
+                  "X-CSRFToken": csrfToken,
+                  "content-type":"application/json"
+              },
+              body:JSON.stringify({"usermessage":lastUserMessage})
+            })
+            let response=await request.json()
+            botMessage=response.message
+            console.log(botMessage)
+            newEntry()
+            //{message :"<message>} backend pe ye krde
+          
+            // if (lastUserMessage === 'What is your name' || lastUserMessage === 'name') {
+            //   botMessage = 'My name is LLMatizer';
+            // }
+          }
+          function newEntry() {
+              messages.push("<b>" + botName + ":</b> " + botMessage);
+              Speech(botMessage);
+              for (var i = 1; i < 13; i++) {
+                if (messages[messages.length - i])
+                  document.getElementById("chatlog" + i).innerHTML = messages[messages.length - i];
+              }
+            }
+          
+          
+          
+          /////////////////////////////////////////////////
+          function Speech(say) {
+            if ('speechSynthesis' in window && talking) {
+              var utterance = new SpeechSynthesisUtterance(say);
+              speechSynthesis.speak(utterance);
+            }
+          }
+          
+          
+          document.onkeypress = keyPress;
+          function keyPress(e) {
+            var x = e || window.event;
+            var key = (x.keyCode || x.which);
+            if (key == 13 || key == 3) {
+              chatbotResponse();
+            }
+          }
+          
+          
+          function placeHolder() {
+            document.getElementById("chatbox").placeholder = "How may I help you?";
+          }
+          </script>  
 
 </body>
 </html>
