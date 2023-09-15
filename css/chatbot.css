@@ -3,12 +3,14 @@
     font: 15px arial, sans-serif;
     padding-top: 20px;
     padding-bottom: 25px;
-    box-shadow: 5px 5px 5px grey;
+    box-shadow: 5px 5px 5px rgb(138, 119, 137);
     border-radius: 15px;
     float: right;
     width: 68%;
     padding-left: 3%;
-}
+    background-image: url(/images/abstract-digital-background-network-connection-structure-big-data-futuristic-abstract-wave-3d-rendering_697329-183.avif);
+    background-repeat: no-repeat;
+  }
 
   
   .chatlog {
@@ -31,3 +33,75 @@
      max-width: 30%;
      text-align: center;
   }
+
+  .gradient-background {
+    background: linear-gradient(300deg, #4941ef, #9b4279, #b48079);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+  
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  
+  .colored-section{
+    background-color: #102C57;
+    /* background-image: linear-gradient(to left,#102C57, #967E76 ); */
+    color:#fff;
+  }
+  
+  .white-section{
+  background-color: #fff;
+  }
+  
+  /* Navigation bar */
+  .navbar {
+    padding: 0 0 4.5rem;
+  }
+  
+  .navbar-brand {
+    font-family: "Ubuntu";
+    font-size: 2.5rem;
+    font-weight: "bold";
+  }
+  
+  .navbar-item {
+    padding: 0 18px;
+    font-family: "Montserrat-light";
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+  }
+  
+  /* Download Buttons */
+  .download-button {
+    margin: 5% 3% 5% 0;
+  }
+  
+  /* title section */
+  #title {
+    color: white;
+    text-align: left;
+  }
+  
+  #title .container-fluid {
+    padding: 3% 12% 7%;
+  }
+  
+  .title-img {
+    width: 60%;
+    position: absolute;
+    right: 30%;
+  }
+  
+  

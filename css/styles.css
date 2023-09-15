@@ -301,9 +301,9 @@ background-color: #fff;
 }
 
 .video-section {
-	background: url(/images/why.jpg) no-repeat fixed center;
-	background-size: cover;
-	overflow: hidden;
+	background: url(/images/axis.png) no-repeat fixed center;
+	background-size:contain;
+	
 }
 .video-overlay {
 	background: linear-gradient(to left, rgba(122, 96, 255, 0.90), rgba(205, 159, 250, 0.90));
@@ -479,38 +479,3 @@ input {
   0%{transform:translate(0px, 100px); opacity: 0;}
   100%{transform:translate(0px, 0); opacity: 1;}
 }
-
-img-fluid:hover{
-	opacity: 1;
-	-webkit-animation: flash 1.5s;
-	animation: flash 1.5s;
-}
-@-webkit-keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-@keyframes flash {
-	0% {
-		opacity: .4;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-.overlay {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	opacity: 0;
-	transition: .5s ease;
-	background-color: #008CBA;
-  }
